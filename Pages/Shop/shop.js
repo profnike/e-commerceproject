@@ -1,6 +1,8 @@
 
 let result;
 let arr=[{src:"../../female/blouse1.jpg",id:0,price:"$10"}, {src:"../../female/blouse2.jpg",id:1,price:"$15"},{src:"../../female/blouse3.jpg",id:2,price:"$20"}]
+
+
 //let indexitem;
 let iditem;
 
@@ -28,17 +30,69 @@ let arrmap=arr.map((item,index)=>{
  
   
   return `
-  <img class="card" src="${item.src}"/>
+  
+  <div class="container">
+  <div class="item">
+  
+  <diV id="imgDiv"><img class="card" src="${item.src}"/></div>
   <div>${item.price}</div>
   
-  <a href="../../Pages/About/about.html" onclick="clicks(${index},${iditem})"><button >click me</button></a>
-<button onclick="additems(${index})" >click on me</button>
-<button onclick>me</button>
+  <a href="../../Pages/Description/description.html" onclick="clicks(${index},${iditem})"><button >More info</button></a>
+<button onclick="additems(${index})" >Add to ShoppingCart</button>
+
+  </div>
   </div>`
+ 
  
    
   
 })
+
+//for skirt
+let arrskirt=[{src:"../../female/skirt1.jpg",id:011,price:"$10"}, {src:"../../female/skirt2.jpg",id:11,price:"$15"},{src:"../../female/skirt3.jpg",id:21,price:"$20"}]
+let skirt=arrskirt.map((item,index)=>{
+  
+  console.log(item)
+  
+  iditem=item.id
+  val=item.src
+
+  if((localStorage.getItem("itemclick")!=null) )
+           
+  {
+        localStorage.setItem("itemclick",JSON.stringify(arrskirt));
+        
+        
+     }
+    else{
+         localStorage.setItem("itemclick",JSON.stringify(arrskirt ));
+         
+         
+    }
+
+
+ 
+  
+  return `
+  
+  <div class="container">
+  <div class="item">
+  
+  <diV id="imgDiv"><img class="card" src="${item.src}"/></div>
+  <div>${item.price}</div>
+  
+  <a href="../../Pages/Description/description.html" onclick="clicks(${index},${iditem})"><button >More info</button></a>
+<button onclick="additems(${index})" >Add to ShoppingCart</button>
+
+  </div>
+  </div>`
+ 
+ 
+   
+  
+})
+document.getElementById("skirt").innerHTML=skirt
+//skirt above
 
 
 let itemsval=[];

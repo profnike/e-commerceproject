@@ -1,4 +1,5 @@
-let arrdesc=[{name:".top", id:0}, {name:"blouse",id:1},{name:"jeans",id:2}]
+let arrdesc=[{name:".top", id:0},{name:"skirt1", id:011}, 
+{name:"blouse",id:1},{name:"skirt2",id:11},{name:"jeans",id:2},{name:"skirt3",id:21}]
 
 let ind;
 if((localStorage.getItem("itemind")!=null))
