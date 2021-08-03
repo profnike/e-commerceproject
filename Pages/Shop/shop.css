@@ -21,12 +21,17 @@
 #imgDiv{
   
 }
+.catName{
+    padding-left: 15px;
+    margin-top: 20px;
+}
 #head{
     background-color: black;
     color: white;
     text-align: center;
     margin-bottom: 20px;
     left: 0;
+   
 }
 nav{
     
@@ -37,6 +42,11 @@ nav{
     font-size: 22px;
     
 }
+.links{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+}
 .linkUl{
     display: flex;
     text-align: center;
@@ -44,7 +54,7 @@ nav{
 }
 .link{
     text-decoration: none;
-   
+   margin-left: 10px;
     list-style: none;
 }
 .item{
@@ -76,9 +86,17 @@ nav{
     width: 100px;
     background-color: cadetblue;
     top: 0;
+    padding-top: 100px;
+   
 }
+.carthead{
+    text-decoration: none;
+    color: black;
+}
+
 .rightside{
     margin-left: 100px;
+
 }
 .main{
     display: flex;
@@ -100,4 +118,20 @@ nav{
     display: flex;
     margin-top: 20px;
     flex-wrap: wrap;
+}
+#tophead{
+    font-weight: bold;
+    font-size: 22px;
+}
+#skirthead{
+    font-weight: bold;
+    font-size: 22px;
+}
+#gownhead{
+    font-weight: bold;
+    font-size: 22px;
+}
+#trouserhead{
+    font-weight: bold;
+    font-size: 22px;
 }

@@ -16,8 +16,9 @@ if((localStorage.getItem("res")!=null) )
   total=total+pricenum
     return `<div>
    
-    <img class="card" src="${item.src}"/>
-    <button onclick="removeitems(${indexs})">me</button>
+    <img class="card-img" src="${item.src}"/>
+    <p>${item.price}</p>
+    <button onclick="removeitems(${indexs})">Remove</button>
     
     </div>`
   
@@ -29,7 +30,7 @@ if((localStorage.getItem("res")!=null) )
    document.getElementById('length').innerHTML= "You have"+" "+newarr.length+" "+"items" 
 
    function removeitems(indexs){
-    alert('hit')
+    
      console.log(indexs)
     
    let indelem=newarr[indexs]
@@ -51,6 +52,7 @@ let pricenumba=+price
      return `<div>
      
      <img class="card" src="${item.src}"/>
+     <p>${item.price}</p>
      <button onclick="removeitems(${indexs})">Remove</button>
      
      </div>`

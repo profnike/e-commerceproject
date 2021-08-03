@@ -1,5 +1,10 @@
 
 let result;
+
+
+
+
+
 let arr=[{src:"../../female/blouse1.jpg",id:0,price:"$10"}, {src:"../../female/blouse2.jpg",id:1,price:"$15"},{src:"../../female/blouse3.jpg",id:2,price:"$20"},
 {src:"../../female/blouse4.jpg",id:3,price:"$20"},{src:"../../female/blouse5.jpg",id:4,price:"$20"}]
 
@@ -60,18 +65,18 @@ let skirt=arrskirt.map((item,index)=>{
   iditem=item.id
   val=item.src
 
-  if((localStorage.getItem("itemclick")!=null) )
+  //if((localStorage.getItem("itemclick")!=null) )
            
-  {
-        localStorage.setItem("itemclick",JSON.stringify(arrskirt));
+  //{
+       // localStorage.setItem("itemclick",JSON.stringify(arrskirt));
         
         
-     }
-    else{
-         localStorage.setItem("itemclick",JSON.stringify(arrskirt ));
+    // }
+    //else{
+    //     localStorage.setItem("itemclick",JSON.stringify(arrskirt ));
          
          
-    }
+    //}
 
 
  
@@ -85,7 +90,7 @@ let skirt=arrskirt.map((item,index)=>{
   <div>${item.price}</div>
   
   <a href="../../Pages/Description/description.html" onclick="clicks(${index},${iditem})"><button >More info</button></a>
-<button onclick="additems(${index})" >Add to ShoppingCart</button>
+<button onclick="addskirt(${index})" >Add to ShoppingCart</button>
 
   </div>
   </div>`
@@ -107,18 +112,7 @@ let Gown=arrgown.map((item,index)=>{
   iditem=item.id
   val=item.src
 
-  if((localStorage.getItem("itemclick")!=null) )
-           
-  {
-        localStorage.setItem("itemclick",JSON.stringify(arrgown));
-        
-        
-     }
-    else{
-         localStorage.setItem("itemclick",JSON.stringify(arrgown ));
-         
-         
-    }
+  
 
 
  
@@ -132,7 +126,7 @@ let Gown=arrgown.map((item,index)=>{
   <div>${item.price}</div>
   
   <a href="../../Pages/Description/description.html" onclick="clicks(${index},${iditem})"><button >More info</button></a>
-<button onclick="additems(${index})" >Add to ShoppingCart</button>
+<button onclick="addgown(${index})" >Add to ShoppingCart</button>
 
   </div>
   </div>`
@@ -155,18 +149,7 @@ let Trousers=arrtrousers.map((item,index)=>{
   iditem=item.id
   val=item.src
 
-  if((localStorage.getItem("itemclick")!=null) )
-           
-  {
-        localStorage.setItem("itemclick",JSON.stringify(arrtrousers));
-        
-        
-     }
-    else{
-         localStorage.setItem("itemclick",JSON.stringify(arrtrousers ));
-         
-         
-    }
+  
 
 
  
@@ -180,7 +163,7 @@ let Trousers=arrtrousers.map((item,index)=>{
   <div>${item.price}</div>
   
   <a href="../../Pages/Description/description.html" onclick="clicks(${index},${iditem})"><button >More info</button></a>
-<button onclick="additems(${index})" >Add to ShoppingCart</button>
+<button onclick="addtrousers(${index})" >Add to ShoppingCart</button>
 
   </div>
   </div>`
@@ -191,6 +174,22 @@ let Trousers=arrtrousers.map((item,index)=>{
 })
 document.getElementById("trousers").innerHTML=Trousers
 //Trousers above
+
+
+//arraytotalbelow
+let arrtotal=[{src:"../../female/blouse1.jpg",id:0,price:"$10"}, {src:"../../female/blouse2.jpg",id:1,price:"$15"},{src:"../../female/blouse3.jpg",id:2,price:"$20"},
+{src:"../../female/blouse4.jpg",id:3,price:"$20"},{src:"../../female/blouse5.jpg",id:4,price:"$20"},
+{src:"../../female/skirt1.jpg",id:011,price:"$10"}, {src:"../../female/skirt2.jpg",id:11,price:"$15"},{src:"../../female/skirt3.jpg",id:21,price:"$20"},
+{src:"../../female/skirt4.jpg",id:31,price:"$20"},{src:"../../female/skirt5.jpg",id:41,price:"$20"},{src:"../../female/skirt6.jpg",id:51,price:"$20"},
+{src:"../../female/gown1.jpg",id:0111,price:"$10"}, {src:"../../female/gown2.png",id:1111,price:"$15"},{src:"../../female/gown3.jpg",id:2111,price:"$20"},
+{src:"../../female/gown5.jpg",id:3111,price:"$20"},
+{src:"../../female/ftrousers1.jpg",id:01111,price:"$10"}, {src:"../../female/ftrousers2.jpg",id:11111,price:"$15"},{src:"../../female/ftrousers3.jpg",id:21111,price:"$20"},
+{src:"../../female/fjean1.jpg",id:31111,price:"$20"},{src:"../../female/fjean2.jpg",id:41111,price:"$20"},
+{src:"../../female/fjean3.jpg",id:51111,price:"$20"}
+]
+
+
+//arraytotal abovve
 
 
 let itemsval=[];
@@ -208,6 +207,7 @@ len=filteritem.length
 document.getElementById("cart").innerHTML="ShoppingCart"+ len
 
 let ansan
+//top
 function additems(index){
 itemsval.push(val)
 console.log(index)
@@ -261,6 +261,208 @@ document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
 
 
 }
+//trousers
+function addtrousers(index){
+  itemsval.push(val)
+  console.log(index)
+  if((localStorage.getItem("itemclick")!=null) )
+           
+  {
+        localStorage.setItem("itemclick",JSON.stringify(arrtrousers));
+        
+        
+     }
+    else{
+         localStorage.setItem("itemclick",JSON.stringify(arrtrousers ));
+         
+         
+    }
+  addeditem= JSON.parse(localStorage.getItem("itemclick"));
+  console.log(addeditem)
+   newval=addeditem.filter((item,indexnew)=>{
+   
+      console.log(item)
+      return index==indexnew
+        
+  })
+  console.log(newval)
+  let rNewval=newval.map((item,index)=>{
+   
+     ansan=item
+  
+    //return ansan
+    //return item
+  })
+  console.log(ansan)
+  //filteritem.push(newval)
+  document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+  //let resval=[]
+  //if((localStorage.getItem("res")!=[]) ){
+    //filteritem=JSON.parse(localStorage.getItem("res"));
+  //}
+             
+          if((localStorage.getItem("res")!=null) ){
+            oldvalfilter= JSON.parse(localStorage.getItem("res"));
+            filteritem=oldvalfilter
+            filteritem.push(ansan)
+            document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+          //let mergefilter=oldvalfilter.concat(filteritem)
+          //filteritem=mergefilter
+           console.log(filteritem)
+           len= filteritem.length
+              localStorage.setItem("res",JSON.stringify(filteritem));
+                 
+                 
+              }
+             else{
+              filteritem.push(newval)
+                localStorage.setItem("filteritem",JSON.stringify(filteritem));
+                document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+                  
+             }
+                 
+                 
+             console.log(filteritem)
+  
+  
+  
+  }
+  //trousers up
+  //gown below
+  function addgown(index){
+    itemsval.push(val)
+    console.log(index)
+    if((localStorage.getItem("itemclick")!=null) )
+             
+    {
+          localStorage.setItem("itemclick",JSON.stringify(arrgown));
+          
+          
+       }
+      else{
+           localStorage.setItem("itemclick",JSON.stringify(arrgown ));
+           
+           
+      }
+    addeditem= JSON.parse(localStorage.getItem("itemclick"));
+    console.log(addeditem)
+     newval=addeditem.filter((item,indexnew)=>{
+     
+        console.log(item)
+        return index==indexnew
+          
+    })
+    console.log(newval)
+    let rNewval=newval.map((item,index)=>{
+     
+       ansan=item
+    
+      //return ansan
+      //return item
+    })
+    console.log(ansan)
+    //filteritem.push(newval)
+    document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+    //let resval=[]
+    //if((localStorage.getItem("res")!=[]) ){
+      //filteritem=JSON.parse(localStorage.getItem("res"));
+    //}
+               
+            if((localStorage.getItem("res")!=null) ){
+              oldvalfilter= JSON.parse(localStorage.getItem("res"));
+              filteritem=oldvalfilter
+              filteritem.push(ansan)
+              document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+            //let mergefilter=oldvalfilter.concat(filteritem)
+            //filteritem=mergefilter
+             console.log(filteritem)
+             len= filteritem.length
+                localStorage.setItem("res",JSON.stringify(filteritem));
+                   
+                   
+                }
+               else{
+                filteritem.push(newval)
+                  localStorage.setItem("filteritem",JSON.stringify(filteritem));
+                  document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+                    
+               }
+                   
+                   
+               console.log(filteritem)
+    
+    
+    
+    }
+    //gown up
+    //skirt below
+    function addskirt(index){
+      itemsval.push(val)
+      console.log(index)
+      if((localStorage.getItem("itemclick")!=null) )
+               
+      {
+            localStorage.setItem("itemclick",JSON.stringify(arrskirt));
+            
+            
+         }
+        else{
+             localStorage.setItem("itemclick",JSON.stringify(arrskirt ));
+             
+             
+        }
+      addeditem= JSON.parse(localStorage.getItem("itemclick"));
+      console.log(addeditem)
+       newval=addeditem.filter((item,indexnew)=>{
+       
+          console.log(item)
+          return index==indexnew
+            
+      })
+      console.log(newval)
+      let rNewval=newval.map((item,index)=>{
+       
+         ansan=item
+      
+        //return ansan
+        //return item
+      })
+      console.log(ansan)
+      //filteritem.push(newval)
+      document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+      //let resval=[]
+      //if((localStorage.getItem("res")!=[]) ){
+        //filteritem=JSON.parse(localStorage.getItem("res"));
+      //}
+                 
+              if((localStorage.getItem("res")!=null) ){
+                oldvalfilter= JSON.parse(localStorage.getItem("res"));
+                filteritem=oldvalfilter
+                filteritem.push(ansan)
+                document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+              //let mergefilter=oldvalfilter.concat(filteritem)
+              //filteritem=mergefilter
+               console.log(filteritem)
+               len= filteritem.length
+                  localStorage.setItem("res",JSON.stringify(filteritem));
+                     
+                     
+                  }
+                 else{
+                  filteritem.push(newval)
+                    localStorage.setItem("filteritem",JSON.stringify(filteritem));
+                    document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+                      
+                 }
+                     
+                     
+                 console.log(filteritem)
+      
+      
+      
+      }
+      //skirt up
+
 function clicks(index,iditem){
  
  
@@ -291,7 +493,7 @@ let resC
 let oldval;
  
 function cart(){
-  alert("kjp")
+  
   
    resC=filteritem.map((item,index)=>{
   let ansA=item.map((itemin,indexin)=>{
@@ -330,19 +532,3 @@ if((localStorage.getItem("res")!=null) )
 
 
 
-//response.forEach(element => {
-    //usersInfo +=`<div class="user-body">
-    //<div class="card"> 
-    //<p id= "upperPart"></p>
-       ////             <p>${element.name}</p>
-        //            <p>${element.phone}</p>
-          //          <p>${element.website}</p>
-           //         <p>${element.username}</p>
-            //        <p>${element.email}</p>
-             //       <p>${element.address.street}</p>
-                    
-    //</div>
-    //</div>`
-    //document.getElementById("display-details").innerHTML=usersInfo;
-    
-//});
