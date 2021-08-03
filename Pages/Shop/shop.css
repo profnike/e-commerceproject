@@ -12,8 +12,11 @@
 }
 #third{
     display: flex;
-    height: 332px;
+   
     margin-top: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    
 }
 #imgDiv{
   
@@ -22,6 +25,8 @@
     background-color: black;
     color: white;
     text-align: center;
+    margin-bottom: 20px;
+    left: 0;
 }
 nav{
     
@@ -45,13 +50,15 @@ nav{
 .item{
     display: flex;
     flex-direction: column;
+   margin: 0px auto;
+    
    
    
 }
 .container{
     background-color: cadetblue;
    margin: 10px;
-  
+  margin-left: 20px;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -65,15 +72,32 @@ nav{
 #sidebar{
     padding: 10px;
     height: 100vh;
+    position: fixed;
     width: 100px;
     background-color: cadetblue;
+    top: 0;
+}
+.rightside{
+    margin-left: 100px;
 }
 .main{
     display: flex;
 }
 .heading{
-    
+
 }
 #skirt{
     display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+#gown{
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+#trousers{
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
