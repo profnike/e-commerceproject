@@ -2,6 +2,8 @@
 .card{
     width: 250px;
     height: 250px;
+    border-radius: 8px;
+   
    
 }
 
@@ -71,10 +73,29 @@ nav{
   margin-left: 20px;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 2px solid black;
     justify-content: center;
     align-items: center;
+  
+    border-radius: 5px;
 }
+.shopping{
+   
+    display: flex;
+}
+.num{
+    display: flex;
+    justify-content: center;
+   
+    align-items: center;
+    width: 200px;
+    margin: 0 auto;
+}
+#shoplink{
+    text-decoration: none;
+    color: white;
+}
+
 #cart{
     color: white;
     font-size: 20px;
@@ -134,4 +155,12 @@ nav{
 #trouserhead{
     font-weight: bold;
     font-size: 22px;
+}
+@media screen and (max-width: 959px) {
+    #head{
+        margin-left: 100px;
+    }
+    .card{
+        width: 200px;
+    }
 }

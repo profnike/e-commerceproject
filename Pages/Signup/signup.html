@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="header">
+    <h1>Sign Up</h1><br/>
+    <p>To get updates on new-arrivals, sales and discounts</p>
+</div>
+<div class="box-alert" >Incomplete input!
+</div>
+<div class="box-create" >Your account has been created successfuly.<br/>
+    <a href="../../index.html"><button>OK</button></a>
+</div>
+<div class="box-exist">This account  already exists!<br/>
+<a href="../../index.html"><button>OK</button></a>
+</div>
+    <form>
+        <div>
+            <label for="name">Name</label><br/>
+            <input  type="text" name="number" id="name" required/>
+          </div>
+          <div>
+            <label for="email">Email</label><br/>
+            <input  type="email" name="email" id="email" required/>
+          </div>
+          <button class="butn" id="signup">Sign Up</button>
+    </form>
+    <script src="signup.js"></script>
+</body>
+</html>

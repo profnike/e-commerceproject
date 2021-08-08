@@ -4,22 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="style.css">
     <title>Zaras House</title>
 </head>
 <body>
+    <div id="system">
     <nav>
         <div id="zara">Zara House</div>
         <ul>
-            <li>About</li>
+            <a href="./Pages/About/about.html" ><li>About</li></a>
            <a href="./Pages/Shop/Shop.html" ><li>Shop</li></a>
-          
+           <a href="./Pages/Services/services.html" ><li>Services</li></a>
+           <a href="./Pages/Contact/contact.html" ><li>Contact Us</li></a>
            
-            <li>Services</li>
+           
             
         </ul>
-        <button id="signin">Sign in</button>
+        <p id="menu"><i class="fa fa-bars"></i></p>
+        <a href="./Pages/Signup/signup.html" ><button id="signin">Sign Up</button></a>
     </nav>
+    <div class="HeroContainer" id= "home">
+        <div class="HeroBg">
+            <img class="ImageBg" src= "./female/project-image4.jpeg" type='img '/>
+         
+        </div>
+        <div class="HeroContent">
+          <p class="HeroH1">Fashion Trends Just For You</p1>
+           <p class="HeroP">
+             Clothes for Everyday, Style for Every Possibility.
+           </p>
+          <div class="HeroBtnWrapper">
+
+           
+
+           <a href="./Pages/Shop/Shop.html" id="shop-button"><button class = "herobtn" >
+              Shop now
+           </button></a>
+        </div>
+        </div>
+    </div>
+</div>
+    <div id="mobile">
+        
+       
+        <div class="SidebarContainer" >
+            <div id="close-div"><p id="close"><i class="fa fa-times"></i></p></div>
+            <div class="SidebarWrapper">
+                <div class="SidebarMenu">
+                    <ul id="mobile-list">
+                        <a href="./Pages/About/about.html" ><li>About</li></a>
+                        <a href="./Pages/Shop/Shop.html" ><li>Shop</li></a>
+                        
+                        <a href="./Pages/Services/services.html" ><li>Services</li></a>
+                       
+                        <a href="./Pages/Contact/contact.html" ><li>Contact Us</li></a>
+                </ul>
+                    
+                </div>
+                <div id="SideBtnWrap">
+                    <a href="./Pages/Signup/signup.html" ><button id="SidebarRoute" > Sign Up</button></a>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

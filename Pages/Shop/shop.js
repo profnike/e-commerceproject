@@ -204,7 +204,8 @@ if((localStorage.getItem("res")==null) ){
 }
 else{filteritem=JSON.parse(localStorage.getItem("res"));}
 len=filteritem.length
-document.getElementById("cart").innerHTML="ShoppingCart"+ len
+//document.getElementById("cart").innerHTML="ShoppingCart"+ len
+document.getElementById("numba").innerHTML= len
 
 let ansan
 //top
@@ -229,7 +230,7 @@ let rNewval=newval.map((item,index)=>{
 })
 console.log(ansan)
 //filteritem.push(newval)
-document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+document.getElementById("numba").innerHTML= filteritem.length
 //let resval=[]
 //if((localStorage.getItem("res")!=[]) ){
   //filteritem=JSON.parse(localStorage.getItem("res"));
@@ -239,7 +240,7 @@ document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
           oldvalfilter= JSON.parse(localStorage.getItem("res"));
           filteritem=oldvalfilter
           filteritem.push(ansan)
-          document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+          document.getElementById("numba").innerHTML= filteritem.length
         //let mergefilter=oldvalfilter.concat(filteritem)
         //filteritem=mergefilter
          console.log(filteritem)
@@ -251,7 +252,7 @@ document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
            else{
             filteritem.push(newval)
               localStorage.setItem("filteritem",JSON.stringify(filteritem));
-              document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+              document.getElementById("numba").innerHTML= filteritem.length
                 
            }
                
@@ -295,7 +296,7 @@ function addtrousers(index){
   })
   console.log(ansan)
   //filteritem.push(newval)
-  document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+  document.getElementById("numba").innerHTML= filteritem.length
   //let resval=[]
   //if((localStorage.getItem("res")!=[]) ){
     //filteritem=JSON.parse(localStorage.getItem("res"));
@@ -305,7 +306,7 @@ function addtrousers(index){
             oldvalfilter= JSON.parse(localStorage.getItem("res"));
             filteritem=oldvalfilter
             filteritem.push(ansan)
-            document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+            document.getElementById("numba").innerHTML= filteritem.length
           //let mergefilter=oldvalfilter.concat(filteritem)
           //filteritem=mergefilter
            console.log(filteritem)
@@ -317,7 +318,7 @@ function addtrousers(index){
              else{
               filteritem.push(newval)
                 localStorage.setItem("filteritem",JSON.stringify(filteritem));
-                document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+                document.getElementById("numba").innerHTML= filteritem.length
                   
              }
                  
@@ -362,7 +363,7 @@ function addtrousers(index){
     })
     console.log(ansan)
     //filteritem.push(newval)
-    document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+    document.getElementById("numba").innerHTML= filteritem.length
     //let resval=[]
     //if((localStorage.getItem("res")!=[]) ){
       //filteritem=JSON.parse(localStorage.getItem("res"));
@@ -372,7 +373,7 @@ function addtrousers(index){
               oldvalfilter= JSON.parse(localStorage.getItem("res"));
               filteritem=oldvalfilter
               filteritem.push(ansan)
-              document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+              document.getElementById("numba").innerHTML= filteritem.length
             //let mergefilter=oldvalfilter.concat(filteritem)
             //filteritem=mergefilter
              console.log(filteritem)
@@ -384,7 +385,7 @@ function addtrousers(index){
                else{
                 filteritem.push(newval)
                   localStorage.setItem("filteritem",JSON.stringify(filteritem));
-                  document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+                  document.getElementById("numba").innerHTML= filteritem.length
                     
                }
                    
@@ -429,7 +430,7 @@ function addtrousers(index){
       })
       console.log(ansan)
       //filteritem.push(newval)
-      document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+      document.getElementById("numba").innerHTML= filteritem.length
       //let resval=[]
       //if((localStorage.getItem("res")!=[]) ){
         //filteritem=JSON.parse(localStorage.getItem("res"));
@@ -439,7 +440,7 @@ function addtrousers(index){
                 oldvalfilter= JSON.parse(localStorage.getItem("res"));
                 filteritem=oldvalfilter
                 filteritem.push(ansan)
-                document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+                document.getElementById("numba").innerHTML= filteritem.length
               //let mergefilter=oldvalfilter.concat(filteritem)
               //filteritem=mergefilter
                console.log(filteritem)
@@ -451,7 +452,7 @@ function addtrousers(index){
                  else{
                   filteritem.push(newval)
                     localStorage.setItem("filteritem",JSON.stringify(filteritem));
-                    document.getElementById("cart").innerHTML="ShoppingCart"+ filteritem.length
+                    document.getElementById("numba").innerHTML= filteritem.length
                       
                  }
                      
@@ -469,7 +470,7 @@ function clicks(index,iditem){
  
   console.log(iditem)
   let indexitem=iditem
-alert('hyt ')
+
 if((localStorage.getItem("itemind")!=null) )
            
          {

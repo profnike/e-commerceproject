@@ -16,18 +16,41 @@ if((localStorage.getItem("res")!=null) )
   total=total+pricenum
     return `<div>
    
-    <img class="card-img" src="${item.src}"/>
-    <p>${item.price}</p>
-    <button onclick="removeitems(${indexs})">Remove</button>
+    <div class="listings">
+    <div class="box-check" id="check">
+       
+       
+    <img class="photo-check" src="${item.src}"/>
     
+    <p>${item.price}</p>
+    <div id="color">
+   <select class="selection" name="color" id="dropdown">
+       <option value="">Select color preference</option>
+       <option value="Black">Black</option>
+       <option value="Green">Green</option>
+       <option value="Blue">Blue</option>
+       
+   </select></div>
+   <div id="size">
+   <select class="selection" name="size" id="dropdown">
+       <option value="">Select appropriate size</option>
+       <option value="XL">XL</option>
+       <option value="L">L</option>
+       
+       
+   </select></div>
+   <button onclick="removeitems(${indexs})">Remove</button>
+    
+    </div>
+    </div>
     </div>`
   
   
    })
    
    document.getElementById('show').innerHTML= showcart
-   document.getElementById('price').innerHTML= "$"+total
-   document.getElementById('length').innerHTML= "You have"+" "+newarr.length+" "+"items" 
+   document.getElementById('price').innerHTML= "Total Price:$"+total
+   document.getElementById('length').innerHTML= "You have"+" "+newarr.length+" "+"item(s)" 
 
    function removeitems(indexs){
     
@@ -50,17 +73,39 @@ let pricenumba=+price
     indexs=index
    
      return `<div>
+     <div class="listings">
+     <div class="box-check" id="check">
+        
+        
+     <img class="photo-check" src="${item.src}"/>
      
-     <img class="card" src="${item.src}"/>
      <p>${item.price}</p>
-     <button onclick="removeitems(${indexs})">Remove</button>
+     <div id="color">
+    <select class="selection" name="color" id="dropdown">
+        <option value="">Select color preference</option>
+        <option value="Black">Black</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+        
+    </select></div>
+    <div id="size">
+    <select class="selection" name="size" id="dropdown">
+        <option value="">Select appropriate size</option>
+        <option value="XL">XL</option>
+        <option value="L">L</option>
+        
+        
+    </select></div>
+    <button onclick="removeitems(${indexs})">Remove</button>
      
+     </div>
+     </div>
      </div>`
-   
+    
    
     })
    
    document.getElementById('show').innerHTML= showcart
-   document.getElementById('length').innerHTML= "You have"+" "+newarr.length+" "+"items" 
+   document.getElementById('length').innerHTML= "You have"+" "+newarr.length+" "+"item(s)" 
    }
   
