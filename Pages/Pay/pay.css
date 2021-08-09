@@ -1,0 +1,10 @@
+#paymentbutndiv{
+ display: flex;
+ justify-content: center;
+ 
+    
+   
+}
+#paymentbutn{
+    width: 600px;
+}

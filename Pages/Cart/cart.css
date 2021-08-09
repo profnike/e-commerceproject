@@ -120,12 +120,23 @@ textarea{
     font-size: 20px;
 }
 }
+.area{
+    display: none;
+    text-decoration: none;
+}
 
   form{
     margin-top: 10px;
     margin-right: 120px;
     line-height: 30px;
     font-size: 19px;
+  
+}
+input{
+    border: 1px solid black;
+}
+textarea{
+    border: 1px solid black;
 }
 @media screen and (min-width: 959px) {
 .middle{

@@ -3,7 +3,14 @@ if((localStorage.getItem("res")!=null) )
            
   {
         newarr=JSON.parse(localStorage.getItem("res"));
+       
+        //document.querySelector("#headH").style.display="none"
   }
+  if(newarr.length==0) {
+    document.querySelector(".area").style.display="none"
+  }
+  else{document.querySelector(".area").style.display="flex"}
+
   let total=0;
   let indexs
   let itemval;
@@ -14,6 +21,20 @@ if((localStorage.getItem("res")!=null) )
  let price=item.price.replace("$","")
  let pricenum=+price
   total=total+pricenum
+
+
+  if((localStorage.getItem("total")!=null) )
+           
+  {
+        localStorage.setItem("total",JSON.stringify(total));
+        
+        
+     }
+    else{
+         localStorage.setItem("total",JSON.stringify(total ));
+         
+         
+    }
     return `<div>
    
     <div class="listings">
@@ -62,7 +83,7 @@ if((localStorage.getItem("res")!=null) )
 let pricenumba=+price
     total=total-pricenumba
     console.log(total)
-    document.getElementById('price').innerHTML= "$"+total
+    document.getElementById('price').innerHTML= "Total Price:$"+ total
     newarr.splice(indexs,1)
    console.log(newarr)
    localStorage.setItem("res",JSON.stringify(newarr));
@@ -71,6 +92,7 @@ let pricenumba=+price
          console.log(itemval)
     console.log(index)
     indexs=index
+    
    
      return `<div>
      <div class="listings">
@@ -104,8 +126,16 @@ let pricenumba=+price
     
    
     })
+    if((localStorage.getItem("res")==null) ){
+      document.querySelector(".paymentButn").style.display="none"
+    }
    
    document.getElementById('show').innerHTML= showcart
    document.getElementById('length').innerHTML= "You have"+" "+newarr.length+" "+"item(s)" 
+   if(newarr.length==0) {
+    document.querySelector(".area").style.display="none"
+  }
+  else{document.querySelector(".area").style.display="flex"}
+  localStorage.setItem("total",JSON.stringify(total));
    }
   

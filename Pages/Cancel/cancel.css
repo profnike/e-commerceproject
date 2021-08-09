@@ -1,0 +1,16 @@
+.contain-cancel{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+    margin-top: 80px;
+    
+  
+}
+img{
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: cadetblue;
+}

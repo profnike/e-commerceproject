@@ -122,8 +122,9 @@ nav{
 .main{
     display: flex;
 }
-.heading{
-
+#fas{
+margin: 0px 2px;
+margin-left: 5px;
 }
 #skirt{
     display: flex;
